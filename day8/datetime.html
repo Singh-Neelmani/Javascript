@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>A date object by passing a date string</title>
+    </head>
+    <body>
+        <script>
+            var d = new Date();
+            document.write(d.toDateString()+"<br>"); //abbreviated date string
+            document.write(d.toLocaleDateString() + "<br>"); //display ur local date string
+            document.write(d.toISOString() + "<br>") ; //display ur ISO standard date
+            document.write(d.toUTCString() + "<br>");//date string converted to UTC time
+            document.write(d.toString() + "<br>"); //display local time zone
+        </script>
+    </body>
+</html>
