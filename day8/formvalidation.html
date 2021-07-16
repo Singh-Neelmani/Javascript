@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <script>
+        function printerror(elemId,hintMsg){
+            document.getElementById(elemId).innerHTML=hintMsg;
+        }
+        function validateform(){
+            var name = document.contactForm.name.value;
+            var email = document.contactForm.email.value;
+            var mobile = document.contactForm.mobile.value;
+            var country = document.contactForm.country.value;
+            var gender = document.contactForm.gender.value;
+            var hobbies = [];
+            var checkboxes = document.getElementsByName("hobbies[]");
+            for(var i=0; i<checkboxes.length;i++){
+                hobbies.push(checkboxes[i].value);
+            }
+        }
+        var nameerr = emailerr = mobileerr = countryerr = gendererr = true;
+        if(name==""){
+            printError("nameerr","Pleae enter ur name");
+        } else {
+            var regex = /^[a-zA-z\s]+$/;
+            if(regex.test(name)==false){
+                printError("nameerr","enter valid name");
+            } else{
+                printError("nameerr","");
+                nameerr=false;
+            }
+        }
+        if(email==""){
+            printError("emailerr","Pleae enter ur email");
+        } else {
+            var regex = /^\S+@\S\.\S+$/;
+            if(regex.test(email)==false){
+                printError("emailerr","enter valid email");
+            } else{
+                printError("emailerr","");
+                emailerr=false;
+            }
+        }
+        if(mobile==""){
+            printError("mobileerr","Pleae enter ur mobile");
+        } else {
+            var regex = /^[1-9]\d{9}$/;
+            if(regex.test(mobile)==false){
+                printError("mobileerr","enter valid mobile");
+            } else{
+                printError("mobileerr","");
+                mobileerr=false;
+            }
+        }
+        if(country=="Select"){
+            printError("countryerr","Please enter ur country");
+        } else {
+            printError("countryerr","");
+            countryerr=false;
+        }
+        if(gender=="Select"){
+            printError("gendererr","Please enter ur gender");
+        } else {
+            printError("gendererr","");
+            gendererr=false;
+        }
+        if((nameerr || emailerr || mobileerr||countryerr||gendererr)==true){
+            return false;
+        } else{
+            var datapreview = "you have entered the following details\n" + "Full Name:" +name+"\n"
+            "Full Name:" +name+"\n"
+            "Full Name:" +email+"\n"
+            "Full Name:" +mobile+"\n"
+            "Full Name:" +country+"\n"
+            "Full Name:" +gender+"\n";
+             if (hobbies.length){
+                 dataPreview+="Hobbies: "+hobbies.joint(" , ");
+
+             }
+             alert(dataPreview);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
