@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Comatible" content="IE=edge">
+    <meta name="viewport" content="width=advice-width",initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obja = {
+            name: "objectA",
+            say: function(greet){
+                document.write(greet + " , " + this.name);
+            }
+        }
+        obja.say("hi");
+        document.write("<br>");
+        var objB = {
+            name:"objectB",
+        }
+        obja.say.call(objB,"Hello");
+    </script>
+</body>
+</html>
