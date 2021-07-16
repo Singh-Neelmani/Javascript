@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <style>
+        label{
+            display: block;
+            margin: 5px 0;
+        }
+        label span{
+            display: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("input").focus(function(){            
+                 $(this).next("span").show().fadeOut("slow");
+            })
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label>Email : <input type="text"><span>Foucs fire</span></label>
+        <label>Password : <input type="password"><span>Foucs fire</span></label>
+        <label><input type="submit" value="Sign in"><span>Focus fire</span></label>
+    </form>
+    <!-- <p><strong>Note:</strong>Select a country</p> -->
+</body>
+</html>

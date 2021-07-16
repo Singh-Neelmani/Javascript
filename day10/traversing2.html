@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+              margin: 20px ;
+        }
+        .frame{
+            border: 2px solid blueviolet;
+        }
+    </style>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+     <script>
+         $(document).ready(function(){
+            //  $("li").parents().addClass("frame");
+            //  $("body").parent().addClass("frame");
+            //  $("li").parents("div").addClass("frame");
+            // $("li").parentsUntil("html").addClass("frame");
+            // $("li").parentsUntil().addClass("frame");
+            // $("ul").children().addClass("frame");
+            $("ul").siblings().addClass("frame");
+            
+         })
+     </script>
+</head>
+<body>
+    <div class="container">
+        <h1>This is my office</h1>
+        <p>This is our office</p>
+        <ul>
+            <li>This is ok</li>
+            <li>This is not ok</li>
+        </ul>
+    </div>
+</body>
+</html>

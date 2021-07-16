@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //   $(".mark").css("background","yellow");
+             $("tr:even").css("background","yellow");
+             $("tr:odd").css("background","green");
+             $("p:first").css("background","red");
+             $("p:last").css("background","cyan");
+             $("p:nth(1)").css("background","blue");
+             $("form :text").css("background","purple");
+             $("form :password").css("background","pink");
+        })
+    </script>
+</head>
+<body>
+    <table border="1">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>xyz</td>
+            <td>xyz@gmail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>abc</td>
+            <td>abc@gmail.com</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>pqr</td>
+            <td>pqr@gmail.com</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>lmn</td>
+            <td>lmn@gmail.com</td>
+        </tr>
+    </tbody>
+</table>
+<p>this is office</p>
+<p>this is another office</p>
+<p>this is my office</p>
+<p>this is our office</p>
+    <form>
+        <label>Name:<input type="text"></label>
+        <label>Password:<input type="password"></label>
+        <input type="submit" value="Sign in">
+
+    </form> 
+    
+</body>
+</html>
